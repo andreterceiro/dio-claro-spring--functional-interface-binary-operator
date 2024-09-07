@@ -2,7 +2,17 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.BinaryOperator;
 
+/**
+ * Class to make tests related to the functional interface binary operator
+ */
 public class FunctionalInterfaceBinaryOperator {
+
+    /**
+     * main method, who invokes other auxiliary methods
+     *
+     * @param args CLI args (ignored)
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         FunctionalInterfaceBinaryOperator.forma1();
         System.out.println("----------------------");
@@ -13,6 +23,9 @@ public class FunctionalInterfaceBinaryOperator {
         FunctionalInterfaceBinaryOperator.forma4();
     }
 
+    /**
+     * Way 1 to use the functional interface binary operator
+     */
     private static void forma1() {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
         BinaryOperator<Integer> somar = (valor1, valor2) -> valor1 + valor2;
@@ -22,6 +35,9 @@ public class FunctionalInterfaceBinaryOperator {
         System.out.println("A soma é: " + soma);
     }
 
+    /**
+     * Way 2 to use the functional interface binary operator
+     */
     private static void forma2() {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
@@ -35,6 +51,9 @@ public class FunctionalInterfaceBinaryOperator {
         System.out.println("A soma é: " + soma);
     }
 
+    /**
+     * Way 3 to use the functional interface binary operator
+     */
     private static void forma3() {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
@@ -45,6 +64,9 @@ public class FunctionalInterfaceBinaryOperator {
         System.out.println("A soma é: " + soma);
     }
 
+    /**
+     * Way 4 to use the functional interface binary operator
+     */
     private static void forma4() {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
