@@ -7,6 +7,8 @@ public class FunctionalInterfaceBinaryOperator {
         FunctionalInterfaceBinaryOperator.forma1();
         System.out.println("----------------------");
         FunctionalInterfaceBinaryOperator.forma2();
+        System.out.println("----------------------");
+        FunctionalInterfaceBinaryOperator.forma3();
     }
 
     private static void forma1() {
@@ -30,4 +32,13 @@ public class FunctionalInterfaceBinaryOperator {
 
         System.out.println("A soma é: " + soma);
     }
+
+    private static void forma3() {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+
+        int soma = numeros.stream().reduce(0, (Integer valor1, Integer valor2) -> valor1 + valor2);
+
+        System.out.println("A soma é: " + soma);
+    }
+
 }
