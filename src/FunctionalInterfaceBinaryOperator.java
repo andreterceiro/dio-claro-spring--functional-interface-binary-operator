@@ -38,7 +38,9 @@ public class FunctionalInterfaceBinaryOperator {
     private static void forma3() {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
-        int soma = numeros.stream().reduce(0, (Integer valor1, Integer valor2) -> valor1 + valor2);
+        // Specifying the type of the parameters in the lambda works, but is not necessary
+        // int soma = numeros.stream().reduce(0, (valor1, valor2) -> valor1 + valor2);
+        int soma = numeros.stream().reduce(0, (valor1, valor2) -> valor1 + valor2);
 
         System.out.println("A soma é: " + soma);
     }
