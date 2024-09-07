@@ -5,6 +5,8 @@ import java.util.function.BinaryOperator;
 public class FunctionalInterfaceBinaryOperator {
     public static void main(String[] args) throws Exception {
         FunctionalInterfaceBinaryOperator.forma1();
+        System.out.println("----------------------");
+        FunctionalInterfaceBinaryOperator.forma2();
     }
 
     private static void forma1() {
@@ -12,6 +14,19 @@ public class FunctionalInterfaceBinaryOperator {
         BinaryOperator<Integer> somar = (valor1, valor2) -> valor1 + valor2;
 
         int soma = numeros.stream().reduce(0, somar);
+
+        System.out.println("A soma é: " + soma);
+    }
+
+    private static void forma2() {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+
+        int soma = numeros.stream().reduce(0, new BinaryOperator<Integer>() {
+            @Override
+            public Integer apply(Integer valor1, Integer valor2) {
+                return valor1 + valor2;
+            }
+        });
 
         System.out.println("A soma é: " + soma);
     }
